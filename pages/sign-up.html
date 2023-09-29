@@ -11,7 +11,7 @@
   <main id="sign-up-page" class="page">
     <header id="page-header-section">
       <a href="/">
-        <h1 id="page-header">＄ Expense Tracker</h1>
+        <h1 id="page-header">₹ Expense Tracker</h1>
       </a>
     </header>
     <article id="form-container">
@@ -28,6 +28,14 @@
           <input type="password" name="password" id="password-text-box" placeholder="Enter password"
             class="input-box" />
         </fieldset>
+        <fieldset id="confirm-password-field" class="field">
+          <legend class="field-title">Confirm password</legend>
+          <input type="text" name="confirm-password" id="confirm-password-text-box" placeholder="Confirm Password"
+            class="input-box" />
+        </fieldset>
+
+        <div id="error-box" class="hide">Password doesn't match</div>
+
         <div id="buttons-section">
           <input type="reset" value="Clear" class="button" />
           <input type="submit" value="Submit" class="button" id="submit-btn" />
