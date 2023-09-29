@@ -1,0 +1,51 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Track Expense</title>
+  <link rel="stylesheet" href="../styles/track-expense.css" />
+  <script src="../scripts/track-expense.js"></script>
+</head>
+
+<body>
+  <main id="page">
+    <header id="page-header-section">
+      <h1 id="page-header">₹ Expense Tracker</h1>
+      <div>
+        <a href="./about-us-page.html" class="auth-link">About us</a>
+        <ul id="auth-section">
+          <li><input type="button" class="auth-link" value="Sign out" id="sign-out-btn"></input></li>
+        </ul>
+      </div>
+    </header>
+
+    <div id="main-content">
+      <label for="categories">Select Category :</label>
+      <select id="categories">
+        <option value="" hidden="true" default="true"></option>
+        <option value="shopping">Shopping</option>
+        <option value="travel">Travel</option>
+      </select>
+    </div>
+
+    <article id="main-content">
+      <section id="expense-section">
+        <header id="expense-section-header">
+          <h1 id="category-header">Expenses</h1>
+          <h1 id="total-expense-header">
+            Total Expense: ₹<span id="total-expense"></span>
+          </h1>
+        </header>
+        <nav id="nav-section">
+          <span>Recent Expenses</span>
+          <div id="nav-buttons">
+            <input type="button" value="Add Expense" id="add-expense-btn" />
+          </div>
+        </nav>
+        <ul id="expenses"></ul>
+      </section>
+    </article>
+  </main>
+</body>
+
+</html>

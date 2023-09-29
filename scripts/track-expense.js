@@ -15,17 +15,24 @@ const setupSignOutButton = () => {
   signOutButton.onclick = signOutUser;
 };
 
-const greetUser = () => {
-  const username = localStorage.getItem("name");
-  const greetMsgContainer = document.querySelector("#greet-msg");
-  greetMsgContainer.innerText = `Hello ${toCaptialize(username)}`;
+const displayCategoryName = name => {
+  const categoryName = toCaptialize(name);
+  const categoryHeaderContainer = document.querySelector("#category-header");
+  categoryHeaderContainer.innerText = `${categoryName} Expenses`;
+};
+
+const setupCategory = () => {
+  const categorySelector = document.querySelector("#categories");
+  categorySelector.addEventListener("change", () => {
+    displayCategoryName(categorySelector.value);
+  });
 };
 
 const main = () => {
   const user = localStorage.getItem("name");
   if (!user) return location.assign("./sign-in.html");
   setupSignOutButton();
-  greetUser();
+  setupCategory();
 };
 
 window.onload = main;
