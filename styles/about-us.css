@@ -19,7 +19,10 @@
 }
 
 body {
+  color: var(--green);
   background-color: var(--navy);
+  display: grid;
+  grid-template-rows: 10% 70% 20%;
   cursor: default;
 }
 
@@ -75,15 +78,25 @@ a {
   border: none;
 }
 
-#about-us {
-  color: var(--green);
-}
-
 #about-us > h1 {
   font-size: 1.5em;
   text-align: center;
 }
 
 #about-us-content {
+  height: 95%;
+  gap: 0.5em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: end;
+}
+
+#main-content {
   padding-left: 2em;
+  color: var(--green);
+}
+
+p {
+  text-align: left;
 }
