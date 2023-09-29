@@ -11,7 +11,7 @@ const submitSignUpForm = () => {
     return;
   }
 
-  const users = JSON.parse(localStorage.getItem("users"));
+  const users = JSON.parse(localStorage.getItem("users")) || {};
 
   if (name in users) return alert("Username Already Exists");
 

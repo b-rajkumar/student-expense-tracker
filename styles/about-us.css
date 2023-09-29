@@ -75,36 +75,15 @@ a {
   border: none;
 }
 
-#main-content {
-  height: 80%;
+#about-us {
   color: var(--green);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15%;
-  padding-top: 5em;
 }
 
-#greet-msg {
-  font-size: 2em;
-}
-
-#expense-controls {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1em;
-}
-
-.btn {
-  width: 15%;
-  font-size: 1.3em;
+#about-us > h1 {
+  font-size: 1.5em;
   text-align: center;
-  padding: 0.5em;
-  cursor: pointer;
-  border-radius: 10px;
-  border: 2px solid var(--light-slate);
-  color: var(--green);
-  background-color: var(--light-navy);
+}
+
+#about-us-content {
+  padding-left: 2em;
 }
