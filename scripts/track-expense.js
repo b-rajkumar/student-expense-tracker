@@ -19,6 +19,7 @@ const displayCategoryName = name => {
   const categoryName = toCaptialize(name);
   const categoryHeaderContainer = document.querySelector("#category-header");
   categoryHeaderContainer.innerText = `${categoryName} Expenses`;
+  document.querySelector("#expense-section").style.display = "flex";
 };
 
 const setupCategory = () => {
@@ -28,11 +29,36 @@ const setupCategory = () => {
   });
 };
 
+const displayAddExpensePopup = () => {
+  const addExpensePopup = document.querySelector("#add-expense-popup-page");
+
+  addExpensePopup.style.display = "flex";
+};
+
+const setupAddExpenseButton = () => {
+  const addExpenseButton = document.querySelector("#add-expense-btn");
+
+  addExpenseButton.onclick = () => displayAddExpensePopup();
+};
+
+const setupExpensePopupPage = () => {
+  const addExpensePopup = document.querySelector("#add-expense-popup-page");
+
+  addExpensePopup.onclick = e => {
+    if (e.target === addExpensePopup) {
+      addExpensePopup.style.display = "none";
+    }
+  };
+};
+
 const main = () => {
   const user = localStorage.getItem("name");
   if (!user) return location.assign("./sign-in.html");
-  setupSignOutButton();
+
   setupCategory();
+  setupSignOutButton();
+  setupAddExpenseButton();
+  setupExpensePopupPage();
 };
 
 window.onload = main;
