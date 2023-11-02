@@ -8,9 +8,9 @@ const submitSignUpForm = () => {
     body: JSON.stringify({ name, password }),
   };
 
-  fetch("/sign-up", request).then((res) => {
+  fetch("/sign-up", request).then(res => {
     if (res.status === 201) {
-      location.replace(res.headers.location);
+      location.replace("/sign-in");
       return;
     }
     alert("Username Already Exists");
@@ -20,7 +20,7 @@ const submitSignUpForm = () => {
 const main = () => {
   const signUpForm = document.querySelector("#sign-up-form");
 
-  signUpForm.onsubmit = (event) => {
+  signUpForm.onsubmit = event => {
     event.preventDefault();
 
     submitSignUpForm();
