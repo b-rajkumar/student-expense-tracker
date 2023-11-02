@@ -1,0 +1,67 @@
+<head>
+  <meta charset="UTF-8" />
+  <title>Track Expense</title>
+  <link rel="stylesheet" href="/styles/expenses.css" />
+  <script src="/scripts/expenses.js"></script>
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="/scripts/chart.js"></script>
+  <script src="/scripts/expenses-view.js"></script>
+</head>
+
+<body>
+  <main id="page">
+    <header id="page-header-section">
+      <a href="/">
+        <h1 id="page-header">＄ Expense Tracker</h1>
+      </a>
+      <ul id="auth-section">
+        <li><a href="/sign-out" class="auth-link">Sign Out</a></li>
+      </ul>
+    </header>
+
+    <div id="selector">
+      <label>Select Category :
+        <select id="categories">
+          <option value="" hidden="true" default="true"></option>
+          <option value="food">Food</option>
+          <option value="travel">Travel</option>
+          <option value="shopping">Shopping</option>
+          <option value="entertainment">Entertainment</option>
+          <option value="other">Other</option>
+        </select>
+      </label>
+    </div>
+
+    <article id="main-content">
+      <section id="expense-section">
+        <header id="expense-section-header">
+          <h1 id="category-header">Expenses</h1>
+          <h1 id="total-expense-header">
+            ₹<span id="total-expense"></span>
+          </h1>
+        </header>
+        <nav id="nav-section">
+          <span>
+            <div id="dates">
+              <input type="date" name="from" id="from">
+              <span> - </span>
+              <input type="date" name="to" id="to">
+            </div>
+          </span>
+          <div id="nav-buttons">
+            <input type="button" value="Add Expense" id="add-expense-btn" />
+          </div>
+        </nav>
+        <ul id="expenses"></ul>
+      </section>
+    </article>
+    <div class="popup hide">
+      <div id="pie-chart"></div>
+    </div>
+    <div id="represent-section">
+      <input type="button" value="Represent" id="represent-btn" />
+    </div>
+  </main>
+</body>
+
+</html>
