@@ -23,7 +23,6 @@ const sendInvalidLoginCredentials = (_, res) => {
 };
 
 const handleGetSignUp = (_, res) => {
-  console.log(pwd);
   res.sendFile(pwd + "/public/pages/sign-up.html");
 };
 

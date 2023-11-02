@@ -26,6 +26,7 @@ const main = () => {
 
   const app = createApp(users, expenses, idGenerator, dataStorage);
   const port = process.env.PORT || 8000;
+  if (!process.env.PWD) process.env.PWD = process.env.INIT_CWD;
 
   app.listen(port, () => console.log("APP LISTENING ON PORT :", port));
 };

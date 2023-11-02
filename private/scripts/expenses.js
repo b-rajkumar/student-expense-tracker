@@ -61,9 +61,11 @@ const setupSelectors = () => {
   const categorySelector = document.querySelector("#categories");
   const from = document.querySelector("#from");
   const to = document.querySelector("#to");
+  const representButton = document.querySelector("#represent-btn");
 
   categorySelector.addEventListener("change", () => {
     displayCategoryName(categorySelector.value);
+    representButton.classList.remove("hide");
     fetchExpenses(categorySelector.value, from.value, to.value);
   });
 
@@ -90,7 +92,12 @@ const getCategoryDetails = details => {
 const setupRepresentButton = () => {
   const from = document.querySelector("#from");
   const to = document.querySelector("#to");
+  const categorySelector = document.querySelector("#categories");
   const representButton = document.querySelector("#represent-btn");
+
+  if (categorySelector.value === "") {
+    representButton.classList.add("hide");
+  }
   representButton.onclick = () => {
     const popup = document.querySelector(".popup");
     popup.classList.remove("hide");

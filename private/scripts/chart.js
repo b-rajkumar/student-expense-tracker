@@ -19,6 +19,7 @@ const renderPieChart = expenses => {
           textStyle: { color: "#64ffda", fontSize: 20 },
           position: "bottom",
         },
+        titleTextStyle: { color: "#64ffda" },
         chartArea: { width: "50%", height: "80%" },
       };
 
